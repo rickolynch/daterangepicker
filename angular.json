@@ -23,7 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -72,7 +72,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": [],
             "assets": [
@@ -121,7 +121,52 @@
           }
         }
       }
+    },
+    "date-picker-directive": {
+      "root": "projects/date-picker-directive",
+      "sourceRoot": "projects/date-picker-directive/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/date-picker-directive/tsconfig.lib.json",
+            "project": "projects/date-picker-directive/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/date-picker-directive/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/date-picker-directive/src/test.ts",
+            "tsConfig": "projects/date-picker-directive/tsconfig.spec.json",
+            "karmaConfig": "projects/date-picker-directive/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/date-picker-directive/tsconfig.lib.json",
+              "projects/date-picker-directive/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
-  "defaultProject": "dptest"
+  "defaultProject": "dptest",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
