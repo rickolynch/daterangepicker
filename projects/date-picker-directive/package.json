@@ -1,0 +1,31 @@
+{
+  "name": "date-picker-directive",
+  "version": "1.0.10",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  },
+  "license": "MIT",
+  "description": "This is a date picker that uses a directive which you can place on your html input. Compatible with Angular2+",
+  "private": false,
+  "keywords": [
+    "date picker",
+    "date range",
+    "angular2",
+    "angular4",
+    "typescript",
+    "directive",
+    "ng",
+    "ng2",
+    "ng4"
+  ],
+  "author": "Ricardo Lynch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rickolynch/date-picker-directive.git"
+  },
+  "homepage": "https://github.com/rickolynch/date-picker-directive",
+  "bugs": {
+    "url": "https://github.com/rickolynch/date-picker-directive/issues"
+  }
+}
