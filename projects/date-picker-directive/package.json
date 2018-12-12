@@ -1,6 +1,6 @@
 {
   "name": "date-picker-directive",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
     "@angular/core": "^6.0.0-rc.0 || ^6.0.0"

@@ -112,8 +112,6 @@ export class DatePickerDirectiveComponent implements OnInit {
     this.displayEndDate = this.endDate.toLocaleDateString();;
     this.renderCalendar('left');
     this.renderCalendar('right');
-    console.log(this.singleDatePicker);
-    console.log(this.maxDate);
   }
 
   getYesterday() {
@@ -273,7 +271,6 @@ export class DatePickerDirectiveComponent implements OnInit {
     let calendar = (this.singleDatePicker ? this.leftCalendar : this.rightCalendar);
     let lday = new Date(calendar.month.getFullYear(), calendar.month.getMonth() + 1, 0);
     if (!this.maxDate || this.isAfter(this.maxDate, lday)) {
-      console.log('available: ' + this.singleDatePicker);
       return true;
     } else {
       return false;
