@@ -34,7 +34,20 @@ export class DatePickerDirective {
     this.componentRef.instance.startDate = this.startDate;
     this.componentRef.instance.endDate = this.endDate;
 
-    document.getElementsByClassName('rl-drpicker')[0].setAttribute('style', 'top:' + parseInt(height + 10) + 'px');
+    let elm = <HTMLElement>document.querySelector('.rl-drpicker');
+    elm.setAttribute('style', 'top:' + parseInt(height + 10) + 'px');
+    let rect = elm.getBoundingClientRect();
+    let l = rect.left;
+    let w = rect.width;
+    let docH = document.getElementsByTagName("body")[0].offsetHeight;
+    let docW = document.getElementsByTagName("body")[0].offsetWidth;
+    let isEntirelyVisible = (l + w <= docW);
+
+    if (!isEntirelyVisible) {
+      elm.classList.add('edge');
+    } else {
+      elm.classList.remove('edge');
+    }
     this.componentRef.instance.close.subscribe(() => {
       this.componentRef.destroy();
     });

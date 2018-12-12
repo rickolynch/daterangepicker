@@ -79,8 +79,7 @@ This project is licensed under the MIT License
 # Keywords
 * Date Picker
 * Date Range
-* Angular2
-* Angular4
+* Angular2+
 * Typescript
 * ng4
 * ng2
